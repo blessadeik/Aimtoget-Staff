@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import CardList from './CardList';
 import Scroll from './Scroll';
 import './Card.css';
-// import {staff} from './staff'
+import {staff} from './staff'
 import SearchBox from './SearchBox';
 // import {staff} from './staff';
 
@@ -11,20 +11,22 @@ class App extends Component{
     constructor(){
         super()
         this.state ={
-            staff:[],
+            staff:staff,
             searchfield:''
         }
     }
 
-    componentDidMount(){
-        fetch('https://jsonplaceholder.typicode.com/users')
-            .then(response=>response.json())
-            .then(users=>this.setState({staff:users}));
-    }
+    // To fetch data from a server
+
+    // componentDidMount(){
+    //     fetch('https://jsonplaceholder.typicode.com/users')
+    //         .then(response=>response.json())
+    //         .then(users=>this.setState({staff:users}));
+    // }
 
     onSearchChange = (event) => {
         this.setState({searchfield:event.target.value})
-       
+        this.setState({staff:staff})
     }
     render(){
         const filteredStaffs = this.state.staff.filter(staff => {

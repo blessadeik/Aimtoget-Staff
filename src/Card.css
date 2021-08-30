@@ -1,0 +1,13 @@
+/* Css file for Cards */
+.photo{
+    height:200px;
+    width:200px;
+}
+
+body{
+    margin:0;
+    padding:0;
+    font-family: "Helvetica Neue",Helvetica;
+    background:url(./bg3.png);
+    background-size: cover;
+}

@@ -7,6 +7,6 @@
 body{
     margin:0;
     padding:0;
-    background:url(./bg3.png);
+    background:url('./bg3.png');
     background-size: cover;
 }

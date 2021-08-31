@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import CardList from './CardList';
-import Scroll from './Scroll';
-import './Card.css';
-import {staff} from './staff'
-import SearchBox from './SearchBox';
+import CardList from '../components/CardList';
+import Scroll from '../components/Scroll';
+import '../components/Card.css';
+import {staff} from '../staff'
+import SearchBox from '../components/SearchBox';
 // import {staff} from './staff';
 
 
@@ -29,10 +29,11 @@ class App extends Component{
         this.setState({staff:staff})
     }
     render(){
-        const filteredStaffs = this.state.staff.filter(staff => {
-            return staff.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
+        const{staff, searchfield} = this.state;
+        const filteredStaffs = staff.filter(staff => {
+            return staff.name.toLowerCase().includes(searchfield.toLowerCase());
              })
-             if(this.state.staff.length===0){
+             if(staff.length === 0){
                  return <h1>Loading...</h1>
              }else{
 

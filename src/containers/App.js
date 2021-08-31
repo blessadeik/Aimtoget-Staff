@@ -33,11 +33,10 @@ class App extends Component{
         const filteredStaffs = staff.filter(staff => {
             return staff.name.toLowerCase().includes(searchfield.toLowerCase());
              })
-             if(staff.length === 0){
-                 return <h1>Loading...</h1>
-             }else{
 
-        return(
+             return !staff.length ?
+                  <h1>Loading...</h1> :
+    (
                 <div className='tc'>
                     <h1 className='black b '>Aimtoget Staff</h1>
                     <SearchBox searchChange={this.onSearchChange}/>
@@ -47,8 +46,6 @@ class App extends Component{
                 </div> 
             );
         }
-    }
-    
-}
+    }  
 
 export default App;

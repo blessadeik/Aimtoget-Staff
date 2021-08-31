@@ -1,5 +1,4 @@
 /* Css file for Cards */
-@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
 .photo{
     height:200px;
     width:200px;
@@ -10,8 +9,4 @@ body{
     padding:0;
     background:url(./bg3.png);
     background-size: cover;
-}
-
-.head-atg{
-    font-family: 'Playball';
 }
